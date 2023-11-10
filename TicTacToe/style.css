@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:600');
+
+html { height: 100%; }
+body {
+  display:flex;
+  font-family         : "Poppins", Helvetica, Arial, serif;
+  font-weight         : 600;
+  background-color    : rgba(40, 83, 107, 1.0);
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+
+
+}
+.game{
+  margin-left:auto;
+  margin-right: auto;
+  text-align:center;
+  
+
+}
+.text{
+  font-family         : "Poppins", Helvetica, Arial, serif;
+  font-weight         : 600;
+  color               : whitesmoke;
+  text-shadow         : 2px 2px 2px black;
+}
+.gameBoard{
+  background-image: url(images/TTTBoard.png);
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.shadow {
+  -moz-box-shadow: 1px 1px 1px  black;
+  -webkit-box-shadow: 1px 1px 1px  black;
+  }
+
+.col {
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: 40px;
+    padding-top: 20px;
+}
+.col:hover {
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(123, 255, 248);
+  color: whitesmoke;
+  font-size: 40px;
+  padding-top: 20px;
+}
+#restart{
+  background-color: transparent;
+  border: 4px solid whitesmoke;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+#restart:hover{
+  background-color: whitesmoke;
+  border: 4px solid rgba(40, 83, 107, 1.0);
+  border-color:  rgba(40, 83, 107, 1.0);
+  color:  rgba(40, 83, 107, 1.0);
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  border-radius: 8px;
+}
+
+.playbutton {
+  background-color    : rgba(255,255,255,0.0);
+  height              : 35px;
+  width               : 100%;
+  margin              : 0;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.playbutton .button {
+  background-color    : rgba(215, 215, 215, 0.1);
+  height              : 35px;
+  box-sizing          : border-box;
+  width               : 125px;
+  margin              : 0;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : whitesmoke;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  padding             : 12px;
+}
+.playbutton .play {
+  background-color    : rgba(255,255,255,0.0);
+  height              : auto;
+  width               : 100px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "Poppins", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : whitesmoke;
+  text-align          : center;
+  letter-spacing      : 2.0px;
+  line-height         : 21.0px;
+}
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
+  #confirm {
+    display: none;
+    background-color: #91FF00;
+    border: 1px solid #aaa;
+    position: fixed;
+    width: 250px;
+    left: 50%;
+    margin-left: -100px;
+    padding: 6px 8px 8px;
+    box-sizing: border-box;
+    text-align: center;
+ }
+ #confirm button {
+    background-color: #48E5DA;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 5px;
+    text-align: center;
+    width: 80px;
+    cursor: pointer;
+ }
+ #confirm .message {
+    text-align: left;
+ }
+
+.myslider { 
+  -webkit-appearance: none; 
+  width: 320px; 
+  height: 20px; 
+  opacity: 2; 
+ } 
+
+
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 320px; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 320px;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background:blanchedalmond;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: blanchedalmond;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background:blanchedalmond;
+  cursor: pointer;
+}
+
+
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 320px;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background-image: linear-gradient(to right,green, yellow, red);
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right,green,yellow, red);
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background-image: linear-gradient(to right,green,yellow, red);
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background-image: linear-gradient(to right,green,yellow, red);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background-image: linear-gradient(to right,green,yellow, red);
+}
+input[type=range]::-ms-fill-upper {
+  background-image: linear-gradient(to right,green,yellow, red);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background-image: linear-gradient(to right,green,yellow, red);
+}

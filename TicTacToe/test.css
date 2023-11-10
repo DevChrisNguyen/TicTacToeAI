@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:600');
+
+
+.desktophd {
+  width               : 100%;
+  min-width           : 1440px;
+  height              : 100vh;
+  min-height          : 1024px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color    : rgba(40, 83, 107, 1.0);
+  opacity             : 1.0;
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+
+.col {
+  text-align: center;
+  line-height: 1.5;
+  vertical-align: middle;
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  color: darkgoldenrod;
+  margin-top:4px;
+  font-size: 40px;
+  padding-top: 20px;
+  
+
+
+}
+/*
+.col:hover {
+text-align: center;
+line-height: 1.5;
+vertical-align: middle;
+display: inline-block;
+width: 140px;
+height: 140px;
+background-color: rgb(123, 255, 248);
+color: darkgoldenrod;
+margin-top:4px;
+font-size: 40px;
+padding-top: 20px;
+
+
+
+}
+*/
+
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+#confirm {
+  display: none;
+  background-color: #91FF00;
+  border: 1px solid #aaa;
+  position: fixed;
+  width: 250px;
+  left: 50%;
+  margin-left: -100px;
+  padding: 6px 8px 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+#confirm button {
+  background-color: #48E5DA;
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 5px;
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
+}
+#confirm .message {
+  text-align: left;
+}
+
+.myslider { 
+-webkit-appearance: none; 
+width: 320px; 
+height: 20px; 
+opacity: 2; 
+
+top                 : 749px;
+position            : absolute;
+margin              : 0;
+left                : 658px;
+
+} 
+
+
+
+input[type=range] {
+-webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+width: 320px; /* Specific width is required for Firefox. */
+background: transparent; /* Otherwise white in Chrome */
+
+top                 : 819px;
+position            : absolute;
+margin              : 0;
+left                : 608px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+-webkit-appearance: none;
+}
+
+input[type=range]:focus {
+outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+width: 320px;
+cursor: pointer;
+
+/* Hides the slider so custom styles can be added */
+background: transparent; 
+border-color: transparent;
+color: transparent;
+}
+
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+-webkit-appearance: none;
+border: 1px solid #000000;
+height: 36px;
+width: 16px;
+border-radius: 3px;
+background:blanchedalmond;
+cursor: pointer;
+margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+border: 1px solid #000000;
+height: 36px;
+width: 16px;
+border-radius: 3px;
+background: blanchedalmond;
+cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+border: 1px solid #000000;
+height: 36px;
+width: 16px;
+border-radius: 3px;
+background:blanchedalmond;
+cursor: pointer;
+}
+
+
+
+input[type=range]::-webkit-slider-runnable-track {
+width: 320px;
+height: 8.4px;
+cursor: pointer;
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+background-image: linear-gradient(to right,green, yellow, red);
+border-radius: 1.3px;
+border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+background-image: linear-gradient(to right,green,yellow, red);
+}
+
+input[type=range]::-moz-range-track {
+width: 100%;
+height: 8.4px;
+cursor: pointer;
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+background-image: linear-gradient(to right,green,yellow, red);
+border-radius: 1.3px;
+border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+width: 100%;
+height: 8.4px;
+cursor: pointer;
+background: transparent;
+border-color: transparent;
+border-width: 16px 0;
+color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+background-image: linear-gradient(to right,green,yellow, red);
+border: 0.2px solid #010101;
+border-radius: 2.6px;
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-lower {
+background-image: linear-gradient(to right,green,yellow, red);
+}
+input[type=range]::-ms-fill-upper {
+background-image: linear-gradient(to right,green,yellow, red);
+border: 0.2px solid #010101;
+border-radius: 2.6px;
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-upper {
+background-image: linear-gradient(to right,green,yellow, red);
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.game{
+  top                 : 245px;
+  position            : absolute;
+  margin              : 0;
+  left                : 505px;
+}
+.desktophd .playbutton {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 749px;
+  height              : 35px;
+  width               : 125px;
+  position            : absolute;
+  margin              : 0;
+  left                : 658px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.desktophd .playbutton .button {
+  background-color    : rgba(215, 215, 215, 0.1);
+  top                 : 0px;
+  height              : 35px;
+  box-sizing          : border-box;
+  width               : 125px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(216, 212, 221, 1.0);
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.desktophd .playbutton .play {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 7px;
+  height              : auto;
+  width               : 100px;
+  position            : absolute;
+  margin              : 0;
+  left                : 13px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "Poppins", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(216, 212, 221, 1.0);
+  text-align          : center;
+  letter-spacing      : 2.0px;
+  line-height         : 21.0px;
+}
+.desktophd .line1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 230px;
+  height              : 417px;
+  width               : 1px;
+  position            : absolute;
+  margin              : 0;
+  left                : 648px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.desktophd .line2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 230px;
+  height              : 417px;
+  width               : 1px;
+  position            : absolute;
+  margin              : 0;
+  left                : 792px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.desktophd .line3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 158px;
+  height              : 417px;
+  width               : 1px;
+  position            : absolute;
+  margin              : 0;
+  left                : 720px;
+  transform           : rotate(-270deg);
+  opacity             : 1.0;
+}
+.desktophd .line4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 302px;
+  height              : 417px;
+  width               : 1px;
+  position            : absolute;
+  margin              : 0;
+  left                : 720px;
+  transform           : rotate(-270deg);
+  opacity             : 1.0;
+}
+.desktophd .x {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 248px;
+  height              : auto;
+  width               : 57px;
+  position            : absolute;
+  margin              : 0;
+  left                : 553px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "Poppins", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 60.0px;
+  color               : rgba(221, 97, 74, 1.0);
+  text-align          : center;
+  letter-spacing      : 8.57px;
+  line-height         : 90.0px;
+}
+.desktophd .o {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 248px;
+  height              : auto;
+  width               : 57px;
+  position            : absolute;
+  margin              : 0;
+  left                : 695px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "Poppins", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 60.0px;
+  color               : rgba(253, 202, 64, 1.0);
+  text-align          : center;
+  letter-spacing      : 8.57px;
+  line-height         : 90.0px;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+.anima-component-wrapper,
+.anima-component-wrapper * {
+  pointer-events      : none;
+}
+.anima-component-wrapper a *,
+.anima-component-wrapper a,
+.anima-component-wrapper input,
+.anima-component-wrapper video,
+.anima-component-wrapper iframe,
+.anima-listeners-active,
+.anima-listeners-active * {
+  pointer-events      : auto;
+}
+.anima-hidden,
+.anima-hidden * {
+  visibility          : hidden;
+  pointer-events      : none;
+}
+.anima-smart-layers-pointers,
+.anima-smart-layers-pointers * {
+  pointer-events      : auto;
+  visibility          : visible;
+}
+.anima-component-wrapper.anima-not-ready,
+.anima-component-wrapper.anima-not-ready * {
+  visibility          : hidden !important;
+}
+.anima-listeners-active-click,
+.anima-listeners-active-click * {
+  cursor              : pointer;
+}
+.anima-word-break {
+  overflow-wrap       : break-word;
+  word-wrap           : break-word;
+  word-break          : break-all;
+  word-break          : break-word;
+}

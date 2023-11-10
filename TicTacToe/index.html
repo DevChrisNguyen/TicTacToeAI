@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div class="game text">
+        <br />
+        <br />
+        <h1 class="text">
+            Tic-Tac-Toe AI
+        </h1>
+        <noscript>Sorry, you have JavaScript disabled. Please enable JS to play.</noscript>
+        
+
+        <div class="gameBoard">
+            <div class="row ">
+                <div class="col " data-i=0 data-j=0></div>
+                <div class="col " data-i=0 data-j=1></div>
+                <div class="col " data-i=0 data-j=2></div>
+            </div>
+            <div class="row">
+                <div class="col " data-i=1 data-j=0></div>
+                <div class="col " data-i=1 data-j=1></div>
+                <div class="col " data-i=1 data-j=2></div>
+            </div>
+            <div class="row">
+                <div class="col " data-i=2 data-j=0></div>
+                <div class="col " data-i=2 data-j=1></div>
+                <div class="col " data-i=2 data-j=2></div>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <div class="rangeslider">
+            <input type="range" min="1" max="10" value="4" id="sliderRange">
+
+        </div>
+        <h3 class="text">
+            AI's Skill Level
+        </h3>
+        <br />
+            <button id="restart">Restart</button>
+        <br />
+        <br />
+        <br />
+        <h3 class="text" id="lastResult">
+            result
+        </h3>
+        <br />
+        <br />
+        <br />
+        <h3 class="text" id="displayHardness">
+            
+        </h3>
+    </div>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+
+
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./img/favicon.png" rel="shortcut icon" />
+    <meta charset="utf-8" />
+    <meta content="width=1440, maximum-scale=1.0" name="viewport" />
+    <link href="./test.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <meta content="AnimaApp.com - Design to code, Automated." name="author" />
+    
+</head>
+
+<body style="display:flex; margin-left: auto; margin-right: auto;
+ background: rgba(40, 83, 107, 1.0);">
+    <input id="anPageName" name="page" type="hidden" value="desktophd" />
+    <div class="desktophd anima-word-break ">
+        <!--div style="width: 1440px; height: 100%; position:relative; margin:auto;"-->
+        <div class="centerFlex">
+            <div class="playbutton">
+                <button class="play" id="restart">Restart</button>
+
+            </div>
+            <div class="rangeslider">
+                <input type="range" min="1" max="10" value="4" id="sliderRange">
+
+            </div>
+            <h3 class="text">
+                AI's Skill Level
+            </h3>
+            <img alt="Image" anima-src="./img/desktop-hd-line4.png" class="line1"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
+            <img alt="Image" anima-src="./img/desktop-hd-line4.png" class="line2"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
+            <img alt="Image" anima-src="./img/desktop-hd-line4.png" class="line3"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
+            <img alt="Image" anima-src="./img/desktop-hd-line4.png" class="line4"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
+            <div class="game">
+                <div class="row ">
+                    <div class="col text" data-i=0 data-j=0></div>
+                    <div class="col" data-i=0 data-j=1></div>
+                    <div class="col" data-i=0 data-j=2></div>
+                </div>
+                <div class="row">
+                    <div class="col" data-i=1 data-j=0></div>
+                    <div class="col" data-i=1 data-j=1></div>
+                    <div class="col" data-i=1 data-j=2></div>
+                </div>
+                <div class="row">
+                    <div class="col" data-i=2 data-j=0></div>
+                    <div class="col" data-i=2 data-j=1></div>
+                    <div class="col" data-i=2 data-j=2></div>
+                </div>
+            </div>
+            <!--div class="x">
+                    x
+                </div>
+                <div class="o">
+                    o
+                </div-->
+            <br />
+
+
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+    <script>
+        anima_isHidden = function (e) {
+            if (!(e instanceof HTMLElement)) return !1;
+            if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && anima_isHidden(e.parentNode)) return !0;
+            return !1;
+        };
+        anima_loadAsyncSrcForTag = function (tag) {
+            var elements = document.getElementsByTagName(tag);
+            var toLoad = [];
+            for (var i = 0; i < elements.length; i++) {
+                var e = elements[i];
+                var src = e.getAttribute("src");
+                var loaded = (src != undefined && src.length > 0 && src != 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+                if (loaded) continue;
+                var asyncSrc = e.getAttribute("anima-src");
+                if (asyncSrc == undefined || asyncSrc.length == 0) continue;
+                if (anima_isHidden(e)) continue;
+                toLoad.push(e);
+            }
+            toLoad.sort(function (a, b) {
+                return anima_getTop(a) - anima_getTop(b);
+            });
+            for (var i = 0; i < toLoad.length; i++) {
+                var e = toLoad[i];
+                var asyncSrc = e.getAttribute("anima-src");
+                e.setAttribute("src", asyncSrc);
+            }
+        };
+        anima_pauseHiddenVideos = function (tag) {
+            var elements = document.getElementsByTagName("video");
+            for (var i = 0; i < elements.length; i++) {
+                var e = elements[i];
+                var isPlaying = !!(e.currentTime > 0 && !e.paused && !e.ended && e.readyState > 2);
+                var isHidden = anima_isHidden(e);
+                if (!isPlaying && !isHidden && e.getAttribute("autoplay") == "autoplay") {
+                    e.play();
+                } else if (isPlaying && isHidden) {
+                    e.pause();
+                }
+            }
+        };
+        anima_loadAsyncSrc = function (tag) {
+            anima_loadAsyncSrcForTag("img");
+            anima_loadAsyncSrcForTag("iframe");
+            anima_loadAsyncSrcForTag("video");
+            anima_pauseHiddenVideos();
+        };
+        var anima_getTop = function (e) {
+            var top = 0;
+            do {
+                top += e.offsetTop || 0;
+                e = e.offsetParent;
+            } while (e);
+            return top;
+        };
+        anima_loadAsyncSrc();
+        anima_old_onResize = window.onresize;
+        anima_new_onResize = undefined;
+        anima_updateOnResize = function () {
+            if (anima_new_onResize == undefined || window.onresize != anima_new_onResize) {
+                anima_new_onResize = function (x) {
+                    if (anima_old_onResize != undefined) anima_old_onResize(x);
+                    anima_loadAsyncSrc();
+                };
+                window.onresize = anima_new_onResize;
+                setTimeout(function () {
+                    anima_updateOnResize();
+                }, 3000);
+            }
+        };
+        anima_updateOnResize();
+        setTimeout(function () {
+            anima_loadAsyncSrc();
+        }, 200);
+    </script>
+
+    <!-- End of Scripts -->
+</body>
+
+</html>
